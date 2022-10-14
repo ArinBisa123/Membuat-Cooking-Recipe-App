@@ -1,8 +1,9 @@
+// const header = new Headers({ "Access-Control-Allow-Origin": "https://www.themealdb.com/api.php?s=" });
 class DataSource {
   static searchFood(keyword) {
     return fetch(`https://www.themealdb.com/api.php/v1/1/search.php?s=${keyword}`, {
-      mode:'no-cors',
       method: "GET",
+      // header: header,
       headers: {
         "Content-Type": "application/json",
         "X-Auth-Token": "1",
@@ -20,4 +21,5 @@ class DataSource {
       });
   }
 }
+
 export default DataSource;
