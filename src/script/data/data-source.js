@@ -4,6 +4,7 @@ class DataSource {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "X-Auth-Token": "1",
       },
     })
       .then((response) => {
