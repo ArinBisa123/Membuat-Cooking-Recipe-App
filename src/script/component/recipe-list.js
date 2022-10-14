@@ -21,15 +21,15 @@ class RecipeList extends HTMLElement {
         -ms-user-select: none;
         user-select: none;
       }
-    </style>
-    `;
-    this.shadowDOM.innerHTML += `<h2 class="placeholder"> ${message}</h2>`;
-  }
-  render() {
-    this.shadowDOM.innerHTML = "";
-    this._recipes.forEach((recipe) => {
-      const recipeItemElement = document.createElement("recipe-item");
-      recipeItemElement.recipe= recipe;
+      </style>
+      `;
+      this.shadowDOM.innerHTML += `<h2 class="placeholder"> ${message}</h2>`;
+    }
+    render() {
+      this.shadowDOM.innerHTML = "";
+      this._recipes.forEach((recipe) => {
+        const recipeItemElement = document.createElement("recipe-item");
+        recipeItemElement.recipe= recipe;
       this.shadowDOM.appendChild(recipeItemElement);
     });
   }
